@@ -1,21 +1,21 @@
 package org.LamiaQA.base;
 
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class CommonAPI {
     WebDriver driver;
-    @Before
+    @BeforeMethod
     public void setUp(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
         System.out.println("browser open success");
     }
-    @After
+    @AfterMethod
     public void close(){
         driver.close();
         System.out.println("browser close success");

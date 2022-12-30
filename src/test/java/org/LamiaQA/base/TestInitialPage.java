@@ -1,25 +1,22 @@
 package org.LamiaQA.base;
-
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class TestInitialPage extends CommonAPI{
 
-    @org.junit.Test
-    public void test1 () {
+    @Test
+    public void validateLandingPage () {
         String expected = "Swag Labs";
         String actual = getPageTitle();
         Assert.assertEquals(expected, actual);
         System.out.println("page title validation success");
     }
     @Test
-    public void test2 () {
+    public void validateLoginPageElements () {
         String expected = "Swag Labs";
         String actual = getPageTitle();
         Assert.assertEquals(expected, actual);
